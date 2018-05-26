@@ -15,41 +15,75 @@ or with yarn: `yarn add angular-styled-components`
 ```
 import { NgModule } from '@angular/core';
 import { StyledComponentsModule } from 'angular-styled-components';
-import { HomeContainer } from '@app/modules/home/containers/home.container';
+import { HomeComponent } from '@app/modules/home/home.component';
 
 @NgModule({
     imports: [
         StyledComponentsModule,
     ],
     exports: [],
-    declarations: [HomeContainer],
-    providers: [AssetSandbox]
+    declarations: [HomeComponent],
+    providers: []
 })
 export class HomeModule {}
 ```
 
-### Use custom HTML tag
+### Use in HTML tag
 
 ```
-<sc-flex fdr jcc aic>
-    <sc-div color="grey" margin="32">
+<div fdr jcc aic>
+    <div color="grey" margin="32" flex="1">
         Right side
-    </sc-div>
-</sc-flex>
+    </div>
+    <div backgroundColor="red" padding="2em" flexGrow="2">
+        Left sides
+    </div>
+</div>
 ```
-
-## Style components
-
-* div
-* flex
-* form
-* img
-* input
-* li
-* span
-* ul
 
 ## Style properties
+
+### Background properties
+
+---
+
+| Property          |   Css property   | Default | Input type |
+| ----------------- | :--------------: | :-----: | :--------: |
+| `background`      |    background    |  none   |   string   |
+| `backgroundColor` | background-color | initial |   string   |
+| `backgroundSize`  | background-size  | initial |   string   |
+
+### Border properties
+
+---
+
+| Property                  |        Css property        | Default |    Input type     |
+| ------------------------- | :------------------------: | :-----: | :---------------: |
+| `borderColor`             |        border-color        | initial |      string       |
+| `borderTopColor`          |      border-top-color      | initial |      string       |
+| `borderBottomColor`       |    border-bottom-color     | initial |      string       |
+| `borderLeftColor`         |     border-left-color      | initial |      string       |
+| `borderRightColor`        |      border-top-color      | initial |      string       |
+| `borderWidth`             |        border-width        | initial | string or integer |
+| `borderTopWidth`          |      border-top-width      | initial | string or integer |
+| `borderBottomWidth`       |    border-bottom-width     | initial | string or integer |
+| `borderLeftWidth`         |     border-left-width      | initial | string or integer |
+| `borderRightWidth`        |     border-right-width     | initial | string or integer |
+| `borderRadius`            |       border-radius        | initial |      string       |
+| `borderTopLeftRadius`     |   border-top-left-radius   | initial |      string       |
+| `borderTopRightRadius`    |  border-top-right-radius   | initial |      string       |
+| `borderBottomLeftRadius`  | border-bottom-left-radius  | initial |      string       |
+| `borderBottomRightRadius` | border-bottom-right-radius | initial |      string       |
+
+### Extra properties
+
+---
+
+| Property     | Css property | Default | Input type |
+| ------------ | :----------: | :-----: | :--------: |
+| `cursor`     |    cursor    | initial |   string   |
+| `blur`       |     blur     | initial |   string   |
+| `box-shadow` |  box-shadow  | initial |   string   |
 
 ### Flex properties
 
@@ -88,6 +122,41 @@ export class HomeModule {}
 | `flexShrink` |   flex-shrink   |       1        |  integer   |
 | `order`      |      order      |       1        |  integer   |
 
+### Font properties
+
+---
+
+| Property       |  Css property   |   Default    |    Input type     |
+| -------------- | :-------------: | :----------: | :---------------: |
+| `color`        |      color      |   initial    |      string       |
+| `textWeight`   |   text-weight   |    normal    | string or integer |
+| `underline`    | text-decoration |  underline   |       none        |
+| `lineThrough`  | text-decoration | line-through |       none        |
+| `whiteSpace`   |   white-space   |   initial    |      string       |
+| `textOverflow` |  text-overflow  |   initial    |      string       |
+
+### Height properties
+
+---
+
+| Property    | Css property | Default |    Input type     |
+| ----------- | :----------: | :-----: | :---------------: |
+| `height`    |    height    | initial | string or integer |
+| `maxHeight` |  max-height  | initial | string or integer |
+| `minHeight` |  min-height  | initial | string or integer |
+
+### Margin properties
+
+---
+
+| Property       | Css property  | Default |    Input type     |
+| -------------- | :-----------: | :-----: | :---------------: |
+| `margin`       |    margin     |    0    | string or integer |
+| `marginLeft`   |  margin-left  |    0    | string or integer |
+| `marginRight`  | margin-right  |    0    | string or integer |
+| `marginTop`    |  margin-top   |    0    | string or integer |
+| `marginBottom` | margin-bottom |    0    | string or integer |
+
 ### Overflow properties
 
 ---
@@ -98,12 +167,52 @@ export class HomeModule {}
 | `overflowX` |  overflow-x  |  none   |   string   |
 | `overflowY` |  overflow-y  |  none   |   string   |
 
+### Padding properties
+
+---
+
+| Property        |  Css property  | Default |    Input type     |
+| --------------- | :------------: | :-----: | :---------------: |
+| `padding`       |    padding     |    0    | string or integer |
+| `paddingLeft`   |  padding-left  |    0    | string or integer |
+| `paddingRight`  | padding-right  |    0    | string or integer |
+| `paddingTop`    |  padding-top   |    0    | string or integer |
+| `paddingBottom` | padding-bottom |    0    | string or integer |
+
 ### Position properties
 
 ---
 
-To be continued...
+| Property   | Css property | Default | Input type |
+| ---------- | :----------: | :-----: | :--------: |
+| `position` |   position   | initial |   string   |
+| `display`  |   display    |  block  |   string   |
+| `zIndex`   |   z-index    |    1    |  integer   |
+| `left`     |     left     |    0    |  integer   |
+| `right`    |    right     |    0    |  integer   |
+| `top`      |     top      |    0    |  integer   |
+| `bottom`   |    bottom    |    0    |  integer   |
 
-## Override styles
+### TextAlign properties
 
-To override the property styles, use the `className` input parameter. This will create a class in of the corresponding element in stead of attaching a class name to the `sc` element.
+---
+
+| Property | Css property | Default | Input type |
+| -------- | :----------: | :-----: | :--------: |
+| `tac`    |  text-align  | center  |    none    |
+| `tar`    |  text-align  |  right  |    none    |
+| `tal`    |  text-align  |  left   |    none    |
+
+### Width properties
+
+---
+
+| Property   | Css property | Default |    Input type     |
+| ---------- | :----------: | :-----: | :---------------: |
+| `width`    |    width     | initial | string or integer |
+| `maxWidth` |  max-width   | initial | string or integer |
+| `minWidth` |  min-width   | initial | string or integer |
+
+## Override style properties
+
+In order to override the style properties, use class

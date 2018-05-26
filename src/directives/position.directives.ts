@@ -42,7 +42,7 @@ export class DisplayDirective {
   selector: '[zIndex]'
 })
 export class ZIndexDirective {
-  @HostBinding('style.display') _z: string;
+  @HostBinding('style.z-index') _z: string;
 
   @Input()
   public set zIndex(val: string) {

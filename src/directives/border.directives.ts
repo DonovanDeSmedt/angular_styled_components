@@ -68,10 +68,12 @@ export class BorderRightColorDirective {
 })
 export class BorderWidthDirective {
   @HostBinding('style.border-width') _borderWidth: string;
+  @HostBinding('style.border-style') _borderStyle: string;
 
   @Input()
   public set borderWidth(val: string | number) {
     this._borderWidth = format(val);
+    this._borderStyle = 'solid';
   }
 }
 @Directive({
@@ -79,10 +81,12 @@ export class BorderWidthDirective {
 })
 export class BorderTopWidthDirective {
   @HostBinding('style.border-top-width') _borderTopWidth: string;
+  @HostBinding('style.border-top-style') _borderStyle: string;
 
   @Input()
   public set borderTopWidth(val: string | number) {
     this._borderTopWidth = format(val);
+    this._borderStyle = 'solid';
   }
 }
 @Directive({
@@ -90,10 +94,12 @@ export class BorderTopWidthDirective {
 })
 export class BorderBottomWidthDirective {
   @HostBinding('style.border-bottom-width') _borderBottomWidth: string;
+  @HostBinding('style.border-bottom-style') _borderStyle: string;
 
   @Input()
   public set borderBottomWidth(val: string | number) {
     this._borderBottomWidth = format(val);
+    this._borderStyle = 'solid';
   }
 }
 @Directive({
@@ -101,10 +107,12 @@ export class BorderBottomWidthDirective {
 })
 export class BorderLeftWidthDirective {
   @HostBinding('style.border-left-width') _borderLeftWidth: string;
+  @HostBinding('style.border-left-style') _borderStyle: string;
 
   @Input()
   public set borderLeftWidth(val: string | number) {
     this._borderLeftWidth = format(val);
+    this._borderStyle = 'solid';
   }
 }
 @Directive({
@@ -112,10 +120,12 @@ export class BorderLeftWidthDirective {
 })
 export class BorderRigthWidthDirective {
   @HostBinding('style.border-rigth-width') _borderRigthWidth: string;
+  @HostBinding('style.border-right-style') _borderStyle: string;
 
   @Input()
   public set borderRigthWidth(val: string | number) {
     this._borderRigthWidth = format(val);
+    this._borderStyle = 'solid';
   }
 }
 /***
