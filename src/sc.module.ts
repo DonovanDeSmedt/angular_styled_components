@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Div, Flex, Form, Image, Input, Li, Span, Ul } from './components';
+import StyledDirectives from './directives';
 
 @NgModule({
   imports: [CommonModule],
-  exports: [Div, Flex, Form, Image, Input, Li, Span, Ul],
-  declarations: [Div, Flex, Form, Image, Input, Li, Span, Ul],
+  exports: [...StyledDirectives],
+  declarations: [...StyledDirectives],
   providers: []
 })
 export class StyledComponentsModule {}

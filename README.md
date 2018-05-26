@@ -102,11 +102,7 @@ export class HomeModule {}
 
 ---
 
-| Property    | Css property | Default | Input type |
-| ----------- | :----------: | :-----: | :--------: |
-| `overflow`  |   overflow   |  none   |   string   |
-| `overflowX` |  overflow-x  |  none   |   string   |
-| `overflowY` |  overflow-y  |  none   |   string   |
+To be continued...
 
 ## Override styles
 

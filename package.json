@@ -1,6 +1,6 @@
 {
   "name": "angular-styled-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Styled component package for Angular",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
