@@ -49,17 +49,6 @@ export class UnderlineDirective {
   }
 }
 @Directive({
-  selector: '[lineThrough]'
-})
-export class UnderlineDirective {
-  @HostBinding('style.textDecoration') _lineThrough: string;
-
-  @Input()
-  public set lineThrough(val: string) {
-    this._lineThrough = 'line-through';
-  }
-}
-@Directive({
   selector: '[whiteSpace]'
 })
 export class WhiteSpaceDirective {

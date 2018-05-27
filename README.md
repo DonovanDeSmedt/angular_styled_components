@@ -1,6 +1,4 @@
-# angular-styled-components
-
-An Angular module that provides styled components to components, the same them in React.
+An Angular module that provides styled components in Angular.
 
 ## Installation
 
@@ -33,10 +31,10 @@ export class HomeModule {}
 ```
 <div fdr jcc aic>
     <div color="grey" margin="32" flex="1">
-        Right side
+        Left side
     </div>
     <div backgroundColor="red" padding="2em" flexGrow="2">
-        Left sides
+        Right side
     </div>
 </div>
 ```
@@ -215,4 +213,5 @@ export class HomeModule {}
 
 ## Override style properties
 
-In order to override the style properties, use class
+Inline style properties can be extended or overriden using class name.
+In order to override a style already defined in an inline style property, the css tag `!important` has to be used.

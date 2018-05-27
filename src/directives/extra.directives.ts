@@ -26,14 +26,20 @@ export class BlurDirective {
     this._blur = format(val);
   }
 }
-@Directive({
-  selector: '[boxShadow]'
-})
-export class BoxShadowDirective {
-  @HostBinding('style.box-shadow') _boxShadow: string;
 
-  @Input()
-  public set boxShadow(val: string) {
-    this._boxShadow = val;
-  }
-}
+/***
+ * Not working --> only with DOMSanitizer.bypassSecurityTrustStyle
+ * This will override all styles, preventing other style items to be set
+ */
+
+// @Directive({
+//   selector: '[boxShadow]'
+// })
+// export class BoxShadowDirective {
+//   @HostBinding('style.box-shadow') _boxShadow: string;
+
+//   @Input()
+//   public set boxShadow(val: string) {
+//     this._boxShadow = val;
+//   }
+// }

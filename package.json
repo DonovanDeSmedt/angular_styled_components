@@ -1,14 +1,14 @@
 {
   "name": "angular-styled-components",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Styled component package for Angular",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "license": "ISC",
-  "keywords": [],
+  "keywords": ["angular", "styled-components", "css", "css-in-js"],
   "author": {
-    "name": "delaware"
+    "name": "Donovan De Smedt"
   },
   "scripts": {
     "build": "npm run build:esm && npm run build:umd && npm run copy",
@@ -33,19 +33,6 @@
     "prepublishOnly": "npm run ci"
   },
   "dependencies": {
-    "@angular/cdk": "5.0.1",
-    "@angular/common": "5.0.1",
-    "@angular/core": "5.0.1",
-    "@angular/forms": "5.0.1",
-    "child-process-promise": "^2.2.1",
-    "font-awesome": "^4.7.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-rollup": "^2.16.2",
-    "husky": "^0.14.3",
-    "inquirer": "^4.0.1",
-    "node-sass-tilde-importer": "^1.0.1",
-    "path": "^0.12.7",
-    "run-sequence": "^2.2.1",
     "rxjs": "^5.5.2"
   },
   "peerDependencies": {
@@ -53,6 +40,9 @@
     "@angular/core": "5.0.1"
   },
   "devDependencies": {
+    "angular2-template-loader": "^0.6.2",
+    "@angular/cdk": "5.0.1",
+    "@angular/forms": "5.0.1",
     "@angular/animations": "5.0.1",
     "@angular/common": "5.0.1",
     "@angular/compiler": "5.0.1",
@@ -78,10 +68,17 @@
     "codelyzer": "^3.0.1",
     "concurrently": "^3.4.0",
     "css-loader": "^0.28.1",
-    "font-awesome": "^4.7.0",
+    "child-process-promise": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rollup": "^2.16.2",
+    "inquirer": "^4.0.1",
+    "node-sass-tilde-importer": "^1.0.1",
+    "path": "^0.12.7",
+    "run-sequence": "^2.2.1",
     "gh-pages": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-inline-ng2-template": "^4.0.0",
+    "husky": "^0.14.3",
     "istanbul-instrumenter-loader": "^3.0.0",
     "jasmine-core": "^2.6.1",
     "karma": "^1.7.0",
@@ -94,7 +91,7 @@
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "lodash-webpack-plugin": "^0.11.4",
-    "node-sass": "^4.5.2",
+    "node-sass": "^4.9.0",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.5",
