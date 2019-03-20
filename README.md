@@ -81,7 +81,9 @@ export class HomeModule {}
 | ------------ | :----------: | :-----: | :--------: |
 | `cursor`     |    cursor    | initial |   string   |
 | `blur`       |     blur     | initial |   string   |
+| `opacity`    |   opacity    |    1    |   string   |
 | `box-shadow` |  box-shadow  | initial |   string   |
+| `transform`  |  transform   |  none   |   string   |
 
 ### Flex properties
 
@@ -114,7 +116,13 @@ export class HomeModule {}
 | `acc`        |  align-content  |     center     |    none    |
 | `acfe`       |  align-content  |    flex-end    |    none    |
 | `acfs`       |  align-content  |   flex-start   |    none    |
-| `acs`        |  align-content  |    stretch     |    none    |
+| `asa`        |   align-self    |      auto      |    none    |
+| `ass`        |   align-self    |    stretch     |    none    |
+| `asc`        |   align-self    |     center     |    none    |
+| `asfs`       |   align-self    |   flex-start   |    none    |
+| `asfe`       |   align-self    |    flex-end    |    none    |
+| `asb`        |   align-self    |    baseline    |    none    |
+| `asi`        |   align-self    |    initial     |    none    |
 | `flex`       |      flex       |       1        |  integer   |
 | `flexGrow`   |    flex-grow    |       1        |  integer   |
 | `flexShrink` |   flex-shrink   |       1        |  integer   |
@@ -127,8 +135,10 @@ export class HomeModule {}
 | Property       |  Css property   |   Default    |    Input type     |
 | -------------- | :-------------: | :----------: | :---------------: |
 | `color`        |      color      |   initial    |      string       |
-| `textWeight`   |   text-weight   |    normal    | string or integer |
+| `fontWeight`   |   font-weight   |    normal    | string or integer |
 | `underline`    | text-decoration |  underline   |       none        |
+| `italic`       |   font-style    |    italic    |       none        |
+| `lineHeight`   |   line-height   |      1       | string or integer |
 | `lineThrough`  | text-decoration | line-through |       none        |
 | `whiteSpace`   |   white-space   |   initial    |      string       |
 | `textOverflow` |  text-overflow  |   initial    |      string       |

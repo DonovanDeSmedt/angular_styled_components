@@ -27,6 +27,30 @@ export class BlurDirective {
   }
 }
 
+@Directive({
+  selector: '[opacity]'
+})
+export class OpacityDirective {
+  @HostBinding('style.opacity') _opacity: string;
+
+  @Input()
+  public set opacity(val: string) {
+    this._opacity = val;
+  }
+}
+
+@Directive({
+  selector: '[transform]'
+})
+export class TransformDirective {
+  @HostBinding('style.transform') _transform: string;
+
+  @Input()
+  public set transform(val: string) {
+    this._transform = val;
+  }
+}
+
 /***
  * Not working --> only with DOMSanitizer.bypassSecurityTrustStyle
  * This will override all styles, preventing other style items to be set

@@ -23,7 +23,7 @@ import {
   BorderTopWidthDirective,
   BorderWidthDirective
 } from './directives/border.directives';
-import { BlurDirective, CursorDirective } from './directives/extra.directives';
+import { BlurDirective, CursorDirective, OpacityDirective, TransformDirective } from './directives/extra.directives';
 import {
   AibDirective,
   AicDirective,
@@ -37,6 +37,7 @@ import {
   JcsbDirective,
   JcseDirective,
   FlexDirective,
+  FlexShortDirective,
   FlexGrowDirective,
   FlexOrderDirective,
   FlexShrinkDirective,
@@ -56,14 +57,12 @@ import {
   FontWeightDirective,
   ColorDirective,
   UnderlineDirective,
+  ItalicDirective,
+  LineHeightDirective,
   TextOverflowDirective,
   WhiteSpaceDirective
 } from './directives/font.directives';
-import {
-  HeightDirective,
-  MaxHeightDirective,
-  MinHeightDirective
-} from './directives/height.directives';
+import { HeightDirective, MaxHeightDirective, MinHeightDirective } from './directives/height.directives';
 import {
   MarginDirective,
   MarginBottomDirective,
@@ -71,11 +70,7 @@ import {
   MarginLeftDirective,
   MarginRightDirective
 } from './directives/margin.directives';
-import {
-  OverflowDirective,
-  OverflowXDirective,
-  OverflowYDirective
-} from './directives/overflow.directives';
+import { OverflowDirective, OverflowXDirective, OverflowYDirective } from './directives/overflow.directives';
 import {
   PaddingDirective,
   PaddingBottomDirective,
@@ -98,11 +93,7 @@ import {
   TextAlignLeftDirective,
   TextAlignRightDirective
 } from './directives/textAlign.directives';
-import {
-  WidthDirective,
-  MaxWidthDirective,
-  MinWidthDirective
-} from './directives/width.directives';
+import { WidthDirective, MaxWidthDirective, MinWidthDirective } from './directives/width.directives';
 
 @NgModule({
   imports: [],
@@ -138,6 +129,7 @@ import {
       JcsbDirective,
       JcseDirective,
       FlexDirective,
+      FlexShortDirective,
       FlexGrowDirective,
       FlexOrderDirective,
       FlexShrinkDirective,
@@ -155,6 +147,8 @@ import {
       FontWeightDirective,
       ColorDirective,
       UnderlineDirective,
+      ItalicDirective,
+      LineHeightDirective,
       TextOverflowDirective,
       WhiteSpaceDirective,
       HeightDirective,
@@ -186,7 +180,11 @@ import {
       TextAlignRightDirective,
       WidthDirective,
       MaxWidthDirective,
-      MinWidthDirective
+      MinWidthDirective,
+      BlurDirective,
+      OpacityDirective,
+      TransformDirective,
+      CursorDirective
     ]
   ],
   providers: [],
@@ -237,6 +235,8 @@ import {
     FontSizeDirective,
     FontWeightDirective,
     ColorDirective,
+    ItalicDirective,
+    LineHeightDirective,
     UnderlineDirective,
     TextOverflowDirective,
     WhiteSpaceDirective,
@@ -269,7 +269,11 @@ import {
     TextAlignRightDirective,
     WidthDirective,
     MaxWidthDirective,
-    MinWidthDirective
+    MinWidthDirective,
+    BlurDirective,
+    OpacityDirective,
+    TransformDirective,
+    CursorDirective
   ]
 })
 export class StyledComponentsModule {}

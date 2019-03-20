@@ -1,12 +1,17 @@
 {
   "name": "angular-styled-components",
-  "version": "0.0.5",
+  "version": "0.0.20",
   "description": "Styled component package for Angular",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "license": "ISC",
-  "keywords": ["angular", "styled-components", "css", "css-in-js"],
+  "keywords": [
+    "angular",
+    "styled-components",
+    "css",
+    "css-in-js"
+  ],
   "author": {
     "name": "Donovan De Smedt"
   },
@@ -16,10 +21,8 @@
     "build:esm:watch": "gulp build:esm:watch",
     "build:umd": "webpack --config webpack-umd.config.ts",
     "build:umd:watch": "npm run build:umd -- --watch",
-    "build:watch":
-      "concurrently --raw \"npm run build:umd:watch\" \"npm run build:esm:watch\"",
-    "copy":
-      "node tools/copy-package.js && node tools/cleanup.js && node tools/copy-readme.js",
+    "build:watch": "concurrently --raw \"npm run build:umd:watch\" \"npm run build:esm:watch\"",
+    "copy": "node tools/copy-package.js && node tools/cleanup.js && node tools/copy-readme.js",
     "ci": "npm run build",
     "clean:all": "npm run clean:tmp && rimraf node_modules",
     "clean:tmp": "rimraf coverage dist tmp docs",
